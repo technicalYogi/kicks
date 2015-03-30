@@ -29,9 +29,9 @@ team_t team = {
 	/* Team name */
 	"Harshil",
 	/* First member's full name */
-	"Harshil Sukhadia",
+	"aa",
 	/* First member's email address */
-	"harshil.sukhadia@gmail.com",
+	"aa",
 	/* Second member's full name (leave blank if none) */
 	"",
 	/* Second member's email address (leave blank if none) */
@@ -47,6 +47,9 @@ team_t team = {
 
 /* Pack a size and allocated bit into a word. */
 #define PACK(size, alloc)  ((size) | (alloc))
+
+//****New Macro for prevalloc
+#define NEW_PACK(size,alloc,prev_alloc) ((size)|(alloc)|((prev_alloc)<1))
 
 /* Read and write a word at address p. */
 #define GET(p)       (*(uintptr_t *)(p))
